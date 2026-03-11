@@ -2,7 +2,7 @@ networks:
   expense:
 
 volumes:
-  mysql:{}
+  mysql:
 
 services:
   mysql:
