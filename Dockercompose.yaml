@@ -2,13 +2,13 @@ networks:
   expense:
 
 volumes:
-  mysql: {}
+  mysql:
 
 services:
   mysql:
     image: mysql:1.0.0
     volumes:
-      - mysql: /var/lib/mysql
+      - mysql:/var/lib/mysql
     container_name: mysql
     networks:
       - expense
