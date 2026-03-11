@@ -6,7 +6,7 @@ volumes:
 
 services:
   mysql:
-    image: mysql
+    image: sumanth7696/mysql
     volumes:
       - mysql:/var/lib/mysql
     container_name: mysql
@@ -14,7 +14,7 @@ services:
       - expense
   
   backend:
-    image: backend
+    image: sumanth7696/backend
     command: sh -c "sleep 10 && node /opt/backend/index.js" 
     container_name: backend
     depends_on:
@@ -23,7 +23,7 @@ services:
       - expense
 
   frontend:
-    image: frontend
+    image: sumanth7696/frontend
     container_name: frontend
     networks:
       - expense
